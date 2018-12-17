@@ -13,16 +13,16 @@
       <div vlass="navbar-header">
        <p class="text-lg-left"><%= link_to "Espn Fan Forum", root_path, class: "navbar-brand" %></p>
       </div>
-    <ul class="nav nav navbar-right">
+    <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-info btn-sm" %></li>
          <% else %>
-              <li><%= link_to "Log In", new_user_session_path, class: "btn btn-info btn-sm" %></li>
-              <li><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-info btn-sm" %></li>
+              <li><%= link_to "Log In", new_user_session_path, class: "btn btn-warning" %></li>&nbsp;
+              <li><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success" %></li>
          <% end %>
        </ul>
        <% if user_signed_in? %>
-         <p><%= link_to "Post It", new_message_path, class: "navbar-text navbar-link" %></p>
+         <p><%= link_to "Post It", new_message_path, class: "btn btn-success btn-lg" %></p>
          <% end %>
          <div/>
        </nav>
